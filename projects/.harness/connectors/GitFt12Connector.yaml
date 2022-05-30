@@ -1,0 +1,24 @@
+connector:
+  name: GitFt12Connector
+  identifier: GitFt12Connector
+  description:
+  orgIdentifier: default
+  projectIdentifier: GitFt12
+  type: Github
+  spec:
+    url: https://github.com/VikasChowdary/GitFt12
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: Vikas
+          tokenRef: account.patForGithub
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: account.patForGithub
+    delegateSelectors:
+    - acctgroup
+    executeOnDelegate: true
+    type: Repo
